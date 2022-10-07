@@ -1,0 +1,46 @@
+{
+    "skyhigh173.number.name": "Number Extension",
+    "skyhigh173.number.description": "An extension related to math",
+    "skyhigh173.number.category": "Number",
+
+    "skyhigh173.number.getConst": "get math const [MENU]",
+    "skyhigh173.number.getConst.menu.pi": "π",
+    "skyhigh173.number.getConst.menu.e": "e",
+    "skyhigh173.number.getConst.menu.phi": "ϕ",
+    "skyhigh173.number.getConst.menu.sqrt2": "√2",
+
+    "skyhigh173.number.bigIntPlus": "BigInt [A] + [B]",
+    "skyhigh173.number.bigIntMinus": "BigInt [A] - [B]",
+    "skyhigh173.number.bigIntMultiply": "BigInt [A] * [B]",
+    "skyhigh173.number.bigIntDivide": "BigInt [A] / [B]",
+    "skyhigh173.number.bigIntExpo": "BigInt [A] ^ [B]",
+    "skyhigh173.number.bigIntMod": "BigInt [A] mod [B]",
+
+    "skyhigh173.number.trig": "rad [MENU] of [X]",
+    "skyhigh173.number.trig.menu.sin": "sin",
+    "skyhigh173.number.trig.menu.cos": "cos",
+    "skyhigh173.number.trig.menu.tan": "tan",
+    "skyhigh173.number.trig.menu.sinh": "sinh",
+    "skyhigh173.number.trig.menu.cosh": "cosh",
+    "skyhigh173.number.trig.menu.tanh": "tanh",
+    "skyhigh173.number.trig.menu.asin": "asin",
+    "skyhigh173.number.trig.menu.acos": "acos",
+    "skyhigh173.number.trig.menu.atan": "atan",
+    "skyhigh173.number.trig.menu.asinh": "asinh",
+    "skyhigh173.number.trig.menu.acosh": "acosh",
+    "skyhigh173.number.trig.menu.atanh": "atanh",
+
+    "skyhigh173.number.atan2": "atan2 X:[X] Y:[Y]",
+
+    "skyhigh173.number.log": "log[B]([N])",
+
+    "skyhigh173.number.minmax": "[MENU] value of [A][B]",
+    "skyhigh173.number.minmax.menu.min": "min",
+    "skyhigh173.number.minmax.menu.max": "max",
+
+    "skyhigh173.number.func": "[MENU] of [N]",
+    "skyhigh173.number.func.menu.sign": "sign",
+    "skyhigh173.number.func.menu.cbrt": "cbrt",
+    "skyhigh173.number.func.menu.trunc": "trunc"
+}
+
