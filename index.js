@@ -275,17 +275,9 @@ class MyExtension extends Extension {
             color: '#77AEF7'
         });
 
-        api.addCategory({
-            categoryId: 'skyhigh173.number.bigint.category', 
-            messageId: 'skyhigh173.number.bigint.category', 
-            color: '#CC78F7'
-        }); 
+        this.addBigIntBlocks();
         api.removeCategory('skyhigh173.number.bigint.category');
-        api.addCategory({
-            categoryId: 'skyhigh173.number.numbertype.category', 
-            messageId: 'skyhigh173.number.numbertype.category', 
-            color: '#6666E8'
-        }); 
+        this.addNumberTypeBlocks();
         api.removeCategory('skyhigh173.number.numbertype.category');
         // more extension
         api.addBlock({
