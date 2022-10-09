@@ -13,7 +13,7 @@ A clipCC extension about number!
 
 But you cant calculate numbers with decimal points. (example `3n / 2n` )
 
-## NumberType
+### NumberType
 
 Number Type allows you to process the number faster. For example `is () int` is useful.
 
