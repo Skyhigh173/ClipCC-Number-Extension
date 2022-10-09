@@ -78,7 +78,7 @@ class MyExtension extends Extension {
         } catch(error) {
             console.log('loaded BigInt succfully');
         }
-        api.addCategory({categoryId: 'skyhigh173.number.bigint.category', messageId: 'skyhigh173.number.bigint.category', color: '#CC78F7'}); 
+        
         // a + b
         api.addBlock({
             opcode: 'skyhigh173.number.bigIntPlus',
@@ -274,6 +274,19 @@ class MyExtension extends Extension {
             messageId: 'skyhigh173.number.category',
             color: '#77AEF7'
         });
+
+        api.addCategory({
+            categoryId: 'skyhigh173.number.bigint.category', 
+            messageId: 'skyhigh173.number.bigint.category', 
+            color: '#CC78F7'
+        }); 
+        api.removeCategory('skyhigh173.number.bigint.category');
+        api.addCategory({
+            categoryId: 'skyhigh173.number.numbertype.category', 
+            messageId: 'skyhigh173.number.numbertype.category', 
+            color: '#6666E8'
+        }); 
+        api.removeCategory('skyhigh173.number.numbertype.category');
         // more extension
         api.addBlock({
             opcode: 'skyhigh173.number.addExtension',
