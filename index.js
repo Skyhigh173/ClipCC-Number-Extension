@@ -78,7 +78,7 @@ class MyExtension extends Extension {
         } catch(error) {
             console.log('loaded BigInt succfully');
         }
-        
+        api.addCategory({categoryId: 'skyhigh173.number.bigint.category', messageId: 'skyhigh173.number.bigint.category', color: '#CC78F7'});
         // a + b
         api.addBlock({
             opcode: 'skyhigh173.number.bigIntPlus',
