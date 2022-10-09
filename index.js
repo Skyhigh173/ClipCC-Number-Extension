@@ -70,13 +70,250 @@ class MyExtension extends Extension {
         }
         return result;
     }
+    
+    addBigIntBlocks(){
+        // extension for bigint
+        try{
+            api.removeCategory('skyhigh173.number.bigint.category');
+        } catch(error) {
+            console.log('loaded BigInt succfully');
+        }
+        api.addCategory({categoryId: 'skyhigh173.number.bigint.category', messageId: 'skyhigh173.number.bigint.category', color: '#CC78F7'}); 
+        // a + b
+        api.addBlock({
+            opcode: 'skyhigh173.number.bigIntPlus',
+            type: type.BlockType.REPORTER,
+            messageId: 'skyhigh173.number.bigIntPlus',
+            categoryId: 'skyhigh173.number.bigint.category',
+            param: {
+                A: {
+                    type: type.ParameterType.STRING,
+                    default: '50'
+                },
+                B: {
+                    type: type.ParameterType.STRING,
+                    default: '2'
+                }
+            },
+            function: args => {
+                return this.BigIntPlus(args.A, args.B);
+            }
+        });
+        // a - b
+        api.addBlock({
+            opcode: 'skyhigh173.number.bigIntMinus',
+            type: type.BlockType.REPORTER,
+            messageId: 'skyhigh173.number.bigIntMinus',
+            categoryId: 'skyhigh173.number.bigint.category',
+            param: {
+                A: {
+                    type: type.ParameterType.STRING,
+                    default: '50'
+                },
+                B: {
+                    type: type.ParameterType.STRING,
+                    default: '2'
+                }
+            },
+            function: args => {
+                return this.BigIntMinus(args.A, args.B);
+            }
+        });
+        // a * b
+        api.addBlock({
+            opcode: 'skyhigh173.number.bigIntMultiply',
+            type: type.BlockType.REPORTER,
+            messageId: 'skyhigh173.number.bigIntMultiply',
+            categoryId: 'skyhigh173.number.bigint.category',
+            param: {
+                A: {
+                    type: type.ParameterType.STRING,
+                    default: '50'
+                },
+                B: {
+                    type: type.ParameterType.STRING,
+                    default: '2'
+                }
+            },
+            function: args => {
+                return this.BigIntMultiply(args.A, args.B);
+            }
+        });
+        // a / b
+        api.addBlock({
+            opcode: 'skyhigh173.number.bigIntDivide',
+            type: type.BlockType.REPORTER,
+            messageId: 'skyhigh173.number.bigIntDivide',
+            categoryId: 'skyhigh173.number.bigint.category',
+            param: {
+                A: {
+                    type: type.ParameterType.STRING,
+                    default: '50'
+                },
+                B: {
+                    type: type.ParameterType.STRING,
+                    default: '2'
+                }
+            },
+            function: args => {
+                return this.BigIntDivide(args.A, args.B);
+            }
+        });
+        // a ^ b
+        api.addBlock({
+            opcode: 'skyhigh173.number.bigIntExpo',
+            type: type.BlockType.REPORTER,
+            messageId: 'skyhigh173.number.bigIntExpo',
+            categoryId: 'skyhigh173.number.bigint.category',
+            param: {
+                A: {
+                    type: type.ParameterType.STRING,
+                    default: '50'
+                },
+                B: {
+                    type: type.ParameterType.STRING,
+                    default: '2'
+                }
+            },
+            function: args => {
+                return this.BigIntExpo(args.A, args.B);
+            }
+        });
+        // a mod b
+        api.addBlock({
+            opcode: 'skyhigh173.number.bigIntMod',
+            type: type.BlockType.REPORTER,
+            messageId: 'skyhigh173.number.bigIntMod',
+            categoryId: 'skyhigh173.number.bigint.category',
+            param: {
+                A: {
+                    type: type.ParameterType.STRING,
+                    default: '50'
+                },
+                B: {
+                    type: type.ParameterType.STRING,
+                    default: '3'
+                }
+            },
+            function: args => {
+                return this.BigIntMod(args.A, args.B);
+            }
+        });
+    }
+    addNumberTypeBlocks(){
+        // extension for number type
+        try{
+            api.removeCategory('skyhigh173.number.numbertype.category');
+        } catch(error) { }
+        api.addCategory({categoryId: 'skyhigh173.number.numbertype.category', messageId: 'skyhigh173.number.numbertype.category', color: '#6666E8'});
+        // is nan
+        api.addBlock({
+            opcode: 'skyhigh173.number.isnan',
+            type: type.BlockType.BOOLEAN,
+            messageId: 'skyhigh173.number.isnan',
+            categoryId: 'skyhigh173.number.numbertype.category',
+            param: { N:{type: type.ParameterType.NUMBER, default: 0} },
+            function: args => Number.isNaN(args.N)
+        });
+        // is finite
+        api.addBlock({
+            opcode: 'skyhigh173.number.isfinite',
+            type: type.BlockType.BOOLEAN,
+            messageId: 'skyhigh173.number.isfinite',
+            categoryId: 'skyhigh173.number.numbertype.category',
+            param: { N:{type: type.ParameterType.NUMBER, default: 0} },
+            function: args => Number.isFinite(Number(args.N))
+        });
+        // is int
+        api.addBlock({
+            opcode: 'skyhigh173.number.isint',
+            type: type.BlockType.BOOLEAN,
+            messageId: 'skyhigh173.number.isint',
+            categoryId: 'skyhigh173.number.numbertype.category',
+            param: { N:{type: type.ParameterType.NUMBER, default: 0} },
+            function: args => Number.isInteger(Number(args.N))
+        });
+        // is safe int
+        api.addBlock({
+            opcode: 'skyhigh173.number.issafeint',
+            type: type.BlockType.BOOLEAN,
+            messageId: 'skyhigh173.number.issafeint',
+            categoryId: 'skyhigh173.number.numbertype.category',
+            param: { N:{type: type.ParameterType.NUMBER, default: 0} },
+            function: args => Number.isSafeInteger(Number(args.N))
+        });
+        // to exp
+        api.addBlock({
+            opcode: 'skyhigh173.number.toexp',
+            type: type.BlockType.REPORTER,
+            messageId: 'skyhigh173.number.toexp',
+            categoryId: 'skyhigh173.number.numbertype.category',
+            param: { N:{type: type.ParameterType.NUMBER, default: 12.34}, D:{type: type.ParameterType.NUMBER, default: 6} },
+            function: args => { 
+                let argn = Number(args.N);
+                try{ return argn.toExponential(Number(args.D)); } catch(e) { console.error(e); return '0'; }
+            }
+        });
+        // to fixed
+        api.addBlock({
+            opcode: 'skyhigh173.number.tofixed',
+            type: type.BlockType.REPORTER,
+            messageId: 'skyhigh173.number.tofixed',
+            categoryId: 'skyhigh173.number.numbertype.category',
+            param: { N:{type: type.ParameterType.NUMBER, default: 12.34}, D:{type: type.ParameterType.NUMBER, default: 6} },
+            function: args => { 
+                let argn = Number(args.N);
+                try{ return argn.toFixed(Number(args.D)); } catch(e) { console.error(e); return '0'; }
+            }
+        });
+
+    }
     onInit() {
         api.addCategory({
             categoryId: 'skyhigh173.number.category',
             messageId: 'skyhigh173.number.category',
             color: '#77AEF7'
         });
-
+        // more extension
+        api.addBlock({
+            opcode: 'skyhigh173.number.addExtension',
+            type: type.BlockType.COMMAND,
+            messageId: 'skyhigh173.number.addExtension',
+            categoryId: 'skyhigh173.number.category',
+            param: {
+                MENU: {
+                    type: type.ParameterType.STRING,
+                    default: 'BigInt',
+                    field: true,
+                    menu: this.makeMenu('skyhigh173.number.addExtension',['BigInt','NumberType'])
+                }
+            },
+            function: args => {
+                if (args.MENU == 'BigInt') this.addBigIntBlocks();
+                if (args.MENU == 'NumberType') this.addNumberTypeBlocks();
+            }
+            
+        });
+        // remove extension
+        api.addBlock({
+            opcode: 'skyhigh173.number.removeExtension',
+            type: type.BlockType.COMMAND,
+            messageId: 'skyhigh173.number.removeExtension',
+            categoryId: 'skyhigh173.number.category',
+            param: {
+                MENU: {
+                    type: type.ParameterType.STRING,
+                    default: 'BigInt',
+                    field: true,
+                    menu: this.makeMenu('skyhigh173.number.removeExtension',['BigInt','NumberType'])
+                }
+            },
+            function: args => {
+                if (args.MENU == 'BigInt') try{ api.removeCategory('skyhigh173.number.bigint.category') } catch(e) {}
+                if (args.MENU == 'NumberType') try{ api.removeCategory('skyhigh173.number.numbertype.category') } catch(e) {}
+            }
+            
+        });
         // math const
         api.addBlock({
             opcode: 'skyhigh173.number.getConst',
@@ -97,7 +334,7 @@ class MyExtension extends Extension {
                     case 'e': return Math.E; break;
                     case 'phi': return 1.6180339887498948482; break;
                     case 'sqrt2': return Math.SQRT2; break;
-                    default: console.log('NE error: get Const menu error'); return 0;
+                    default: return 0;
                 }
             }
         });
@@ -162,6 +399,29 @@ class MyExtension extends Extension {
                 return Math.log(args.N) / Math.log(args.B);
             }
         });
+        // other math func
+        api.addBlock({
+            opcode: 'skyhigh173.number.func',
+            type: type.BlockType.REPORTER,
+            messageId: 'skyhigh173.number.func',
+            categoryId: 'skyhigh173.number.category',
+            param: {
+                MENU: {
+                    type: type.ParameterType.STRING,
+                    default: 'sign',
+                    menu: this.makeMenu('skyhigh173.number.func',['sign','cbrt','trunc'])
+                },
+                N: {
+                    type: type.ParameterType.NUMBER,
+                    default: 50
+                }
+            },
+            function: args => {
+                if(args.MENU == 'sign') return Math.sign(args.N);
+                if(args.MENU == 'cbrt') return Math.cbrt(args.N);
+                if(args.MENU == 'trunc') return Math.trunc(args.N);
+            }
+        });
         // min max
         api.addBlock({
             opcode: 'skyhigh173.number.minmax',
@@ -188,153 +448,42 @@ class MyExtension extends Extension {
                 if(args.MENU == 'max') return Math.max(args.A,args.B);
             }
         });
-        // other math func
+        // js Number.
         api.addBlock({
-            opcode: 'skyhigh173.number.func',
+            opcode: 'skyhigh173.number.jsnumber',
             type: type.BlockType.REPORTER,
-            messageId: 'skyhigh173.number.func',
+            messageId: 'skyhigh173.number.jsnumber',
             categoryId: 'skyhigh173.number.category',
             param: {
                 MENU: {
                     type: type.ParameterType.STRING,
-                    default: 'sign',
-                    menu: this.makeMenu('skyhigh173.number.func',['sign','cbrt','trunc'])
+                    default: 'epsilon',
+                    menu: this.makeMenu('skyhigh173.number.jsnumber',['epsilon','min_safe_int','max_safe_int','min_value','max_value','nan','neg_inf','pos_inf'])
                 },
-                N: {
-                    type: type.ParameterType.NUMBER,
-                    default: 50
-                }
             },
             function: args => {
-                if(args.MENU == 'sign') return Math.sign(args.N);
-                if(args.MENU == 'cbrt') return Math.cbrt(args.N);
-                if(args.MENU == 'trunc') return Math.trunc(args.N);
-            }
-        });
-        // a + b
-        api.addBlock({
-            opcode: 'skyhigh173.number.bigIntPlus',
-            type: type.BlockType.REPORTER,
-            messageId: 'skyhigh173.number.bigIntPlus',
-            categoryId: 'skyhigh173.number.category',
-            param: {
-                A: {
-                    type: type.ParameterType.STRING,
-                    default: '50'
-                },
-                B: {
-                    type: type.ParameterType.STRING,
-                    default: '2'
-                }
-            },
-            function: args => {
-                return this.BigIntPlus(args.A, args.B);
-            }
-        });
-        // a - b
-        api.addBlock({
-            opcode: 'skyhigh173.number.bigIntMinus',
-            type: type.BlockType.REPORTER,
-            messageId: 'skyhigh173.number.bigIntMinus',
-            categoryId: 'skyhigh173.number.category',
-            param: {
-                A: {
-                    type: type.ParameterType.STRING,
-                    default: '50'
-                },
-                B: {
-                    type: type.ParameterType.STRING,
-                    default: '2'
-                }
-            },
-            function: args => {
-                return this.BigIntMinus(args.A, args.B);
-            }
-        });
-        // a * b
-        api.addBlock({
-            opcode: 'skyhigh173.number.bigIntMultiply',
-            type: type.BlockType.REPORTER,
-            messageId: 'skyhigh173.number.bigIntMultiply',
-            categoryId: 'skyhigh173.number.category',
-            param: {
-                A: {
-                    type: type.ParameterType.STRING,
-                    default: '50'
-                },
-                B: {
-                    type: type.ParameterType.STRING,
-                    default: '2'
-                }
-            },
-            function: args => {
-                return this.BigIntMultiply(args.A, args.B);
-            }
-        });
-        // a / b
-        api.addBlock({
-            opcode: 'skyhigh173.number.bigIntDivide',
-            type: type.BlockType.REPORTER,
-            messageId: 'skyhigh173.number.bigIntDivide',
-            categoryId: 'skyhigh173.number.category',
-            param: {
-                A: {
-                    type: type.ParameterType.STRING,
-                    default: '50'
-                },
-                B: {
-                    type: type.ParameterType.STRING,
-                    default: '2'
-                }
-            },
-            function: args => {
-                return this.BigIntDivide(args.A, args.B);
-            }
-        });
-        // a ^ b
-        api.addBlock({
-            opcode: 'skyhigh173.number.bigIntExpo',
-            type: type.BlockType.REPORTER,
-            messageId: 'skyhigh173.number.bigIntExpo',
-            categoryId: 'skyhigh173.number.category',
-            param: {
-                A: {
-                    type: type.ParameterType.STRING,
-                    default: '50'
-                },
-                B: {
-                    type: type.ParameterType.STRING,
-                    default: '2'
-                }
-            },
-            function: args => {
-                return this.BigIntExpo(args.A, args.B);
-            }
-        });
-        // a mod b
-        api.addBlock({
-            opcode: 'skyhigh173.number.bigIntMod',
-            type: type.BlockType.REPORTER,
-            messageId: 'skyhigh173.number.bigIntMod',
-            categoryId: 'skyhigh173.number.category',
-            param: {
-                A: {
-                    type: type.ParameterType.STRING,
-                    default: '50'
-                },
-                B: {
-                    type: type.ParameterType.STRING,
-                    default: '3'
-                }
-            },
-            function: args => {
-                return this.BigIntMod(args.A, args.B);
+                let m = args.MENU;
+                if(m == 'epsilon') return Number.EPSILON;
+                if(m == 'min_safe_int') return Number.MIN_SAFE_INTEGER;
+                if(m == 'max_safe_int') return Number.MAX_SAFE_INTEGER;
+                if(m == 'min_value') return Number.MIN_VALUE;
+                if(m == 'max_value') return Number.MAX_VALUE;
+                if(m == 'nan') return Number.NaN;
+                if(m == 'neg_inf') return Number.NEGATIVE_INFINITY;
+                if(m == 'pos_inf') return Number.POSITIVE_INFINITY;
+                return 0;
             }
         });
     }
 
     onUninit() {
-        api.removeCategory('skyhigh173.number.category')
+        try {
+            api.removeCategory('skyhigh173.number.bigint.category');
+            api.removeCategory('skyhigh173.number.numbertype.category');
+        } catch(error) {
+            console.error(error)
+        }
+        api.removeCategory('skyhigh173.number.category');
     }
 }
 

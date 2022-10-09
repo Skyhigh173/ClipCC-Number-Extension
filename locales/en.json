@@ -2,12 +2,16 @@
     "skyhigh173.number.name": "Number Extension",
     "skyhigh173.number.description": "An extension related to math",
     "skyhigh173.number.category": "Number",
+    "skyhigh173.number.bigint.category": "Big Int",
+    "skyhigh173.number.numbertype.category": "Number Type",
 
-    "skyhigh173.number.getConst": "get math const [MENU]",
-    "skyhigh173.number.getConst.menu.pi": "π",
-    "skyhigh173.number.getConst.menu.e": "e",
-    "skyhigh173.number.getConst.menu.phi": "ϕ",
-    "skyhigh173.number.getConst.menu.sqrt2": "√2",
+
+    "skyhigh173.number.isnan": "is [N] NaN",
+    "skyhigh173.number.isfinite": "is [N] finite",
+    "skyhigh173.number.isint": "is [N] int",
+    "skyhigh173.number.issafeint": "is [N] safe int",
+    "skyhigh173.number.toexp": "[N] to exponential [D]",
+    "skyhigh173.number.tofixed": "[N] to fixed [D]",
 
     "skyhigh173.number.bigIntPlus": "BigInt [A] + [B]",
     "skyhigh173.number.bigIntMinus": "BigInt [A] - [B]",
@@ -15,6 +19,21 @@
     "skyhigh173.number.bigIntDivide": "BigInt [A] / [B]",
     "skyhigh173.number.bigIntExpo": "BigInt [A] ^ [B]",
     "skyhigh173.number.bigIntMod": "BigInt [A] mod [B]",
+
+
+    "skyhigh173.number.addExtension": "add affiliate extension [MENU]",
+    "skyhigh173.number.addExtension.menu.BigInt": "BigInt",
+    "skyhigh173.number.addExtension.menu.NumberType": "Number Type",
+    "skyhigh173.number.removeExtension": "remove affiliate extension [MENU]",
+    "skyhigh173.number.removeExtension.menu.BigInt": "BigInt",
+    "skyhigh173.number.removeExtension.menu.NumberType": "Number Type",
+
+
+    "skyhigh173.number.getConst": "get math const [MENU]",
+    "skyhigh173.number.getConst.menu.pi": "π",
+    "skyhigh173.number.getConst.menu.e": "e",
+    "skyhigh173.number.getConst.menu.phi": "ϕ",
+    "skyhigh173.number.getConst.menu.sqrt2": "√2",
 
     "skyhigh173.number.trig": "rad [MENU] of [X]",
     "skyhigh173.number.trig.menu.sin": "sin",
@@ -41,6 +60,18 @@
     "skyhigh173.number.func": "[MENU] of [N]",
     "skyhigh173.number.func.menu.sign": "sign",
     "skyhigh173.number.func.menu.cbrt": "cbrt",
-    "skyhigh173.number.func.menu.trunc": "trunc"
+    "skyhigh173.number.func.menu.trunc": "trunc",
+
+    "skyhigh173.number.jsnumber": "Number [MENU]",
+    "skyhigh173.number.jsnumber.menu.epsilon": "epsilon",
+    "skyhigh173.number.jsnumber.menu.min_safe_int": "min safe int",
+    "skyhigh173.number.jsnumber.menu.max_safe_int": "max safe int",
+    "skyhigh173.number.jsnumber.menu.min_value": "min value",
+    "skyhigh173.number.jsnumber.menu.max_value": "max value",
+    "skyhigh173.number.jsnumber.menu.nan": "NaN",
+    "skyhigh173.number.jsnumber.menu.neg_inf": "negative infinity",
+    "skyhigh173.number.jsnumber.menu.pos_inf": "positive infinity"
+
+
 }
 

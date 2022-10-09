@@ -2,12 +2,16 @@
     "skyhigh173.number.name": "数字扩展",
     "skyhigh173.number.description": "一个关于数字的扩展",
     "skyhigh173.number.category": "数字",
+    "skyhigh173.number.bigint.category": "无限精度",
+    "skyhigh173.number.numbertype.category": "数字类别",
 
-    "skyhigh173.number.getConst": "获取科学常数 [MENU]",
-    "skyhigh173.number.getConst.menu.pi": "π",
-    "skyhigh173.number.getConst.menu.e": "e",
-    "skyhigh173.number.getConst.menu.phi": "ϕ",
-    "skyhigh173.number.getConst.menu.sqrt2": "√2",
+
+    "skyhigh173.number.isnan": "[N] 是否为 NaN",
+    "skyhigh173.number.isfinite": "[N] 是否有限",
+    "skyhigh173.number.isint": "[N] 是否为整数",
+    "skyhigh173.number.issafeint": "[N] 是否为安全整数",
+    "skyhigh173.number.toexp": "[N] to exponential [D]",
+    "skyhigh173.number.tofixed": "[N] to fixed [D]",
 
     "skyhigh173.number.bigIntPlus": "BigInt [A] + [B]",
     "skyhigh173.number.bigIntMinus": "BigInt [A] - [B]",
@@ -15,6 +19,20 @@
     "skyhigh173.number.bigIntDivide": "BigInt [A] / [B]",
     "skyhigh173.number.bigIntExpo": "BigInt [A] ^ [B]",
     "skyhigh173.number.bigIntMod": "BigInt [A] 除以 [B] 的余数",
+
+
+    "skyhigh173.number.addExtension": "添加扩充功能 [MENU]",
+    "skyhigh173.number.addExtension.menu.BigInt": "BigInt",
+    "skyhigh173.number.addExtension.menu.NumberType": "Number Type",
+    "skyhigh173.number.removeExtension": "移除扩充功能 [MENU]",
+    "skyhigh173.number.removeExtension.menu.BigInt": "BigInt",
+    "skyhigh173.number.removeExtension.menu.NumberType": "Number Type",
+
+    "skyhigh173.number.getConst": "获取科学常数 [MENU]",
+    "skyhigh173.number.getConst.menu.pi": "π",
+    "skyhigh173.number.getConst.menu.e": "e",
+    "skyhigh173.number.getConst.menu.phi": "ϕ",
+    "skyhigh173.number.getConst.menu.sqrt2": "√2",
 
     "skyhigh173.number.trig": "rad [MENU] [X]",
     "skyhigh173.number.trig.menu.sin": "sin",
