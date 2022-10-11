@@ -71,6 +71,14 @@ class MyExtension extends Extension {
         return result;
     }
     
+    gcd(a,b,t){
+        if (Number(a) == NaN || Number(b) == NaN) return 0;
+        if (t >= 4000) return 0; 
+        if (!b){
+            return a;
+        }
+        return this.gcd(b, a%b,t+1)
+    }
     addBigIntBlocks(){
         // extension for bigint
         try{
@@ -79,12 +87,13 @@ class MyExtension extends Extension {
             console.log('loaded BigInt succfully');
         }
         api.addCategory({categoryId: 'skyhigh173.number.bigint.category', messageId: 'skyhigh173.number.bigint.category', color: '#CC78F7'});
+        let cateID = 'skyhigh173.number.bigint.category'
         // a + b
         api.addBlock({
             opcode: 'skyhigh173.number.bigIntPlus',
             type: type.BlockType.REPORTER,
             messageId: 'skyhigh173.number.bigIntPlus',
-            categoryId: 'skyhigh173.number.bigint.category',
+            categoryId: cateID,
             param: {
                 A: {
                     type: type.ParameterType.STRING,
@@ -104,7 +113,7 @@ class MyExtension extends Extension {
             opcode: 'skyhigh173.number.bigIntMinus',
             type: type.BlockType.REPORTER,
             messageId: 'skyhigh173.number.bigIntMinus',
-            categoryId: 'skyhigh173.number.bigint.category',
+            categoryId: cateID,
             param: {
                 A: {
                     type: type.ParameterType.STRING,
@@ -124,7 +133,7 @@ class MyExtension extends Extension {
             opcode: 'skyhigh173.number.bigIntMultiply',
             type: type.BlockType.REPORTER,
             messageId: 'skyhigh173.number.bigIntMultiply',
-            categoryId: 'skyhigh173.number.bigint.category',
+            categoryId: cateID,
             param: {
                 A: {
                     type: type.ParameterType.STRING,
@@ -144,7 +153,7 @@ class MyExtension extends Extension {
             opcode: 'skyhigh173.number.bigIntDivide',
             type: type.BlockType.REPORTER,
             messageId: 'skyhigh173.number.bigIntDivide',
-            categoryId: 'skyhigh173.number.bigint.category',
+            categoryId: cateID,
             param: {
                 A: {
                     type: type.ParameterType.STRING,
@@ -164,7 +173,7 @@ class MyExtension extends Extension {
             opcode: 'skyhigh173.number.bigIntExpo',
             type: type.BlockType.REPORTER,
             messageId: 'skyhigh173.number.bigIntExpo',
-            categoryId: 'skyhigh173.number.bigint.category',
+            categoryId: cateID,
             param: {
                 A: {
                     type: type.ParameterType.STRING,
@@ -184,7 +193,7 @@ class MyExtension extends Extension {
             opcode: 'skyhigh173.number.bigIntMod',
             type: type.BlockType.REPORTER,
             messageId: 'skyhigh173.number.bigIntMod',
-            categoryId: 'skyhigh173.number.bigint.category',
+            categoryId: cateID,
             param: {
                 A: {
                     type: type.ParameterType.STRING,
@@ -206,12 +215,13 @@ class MyExtension extends Extension {
             api.removeCategory('skyhigh173.number.numbertype.category');
         } catch(error) { }
         api.addCategory({categoryId: 'skyhigh173.number.numbertype.category', messageId: 'skyhigh173.number.numbertype.category', color: '#6666E8'});
+        let cateID = 'skyhigh173.number.numbertype.category'
         // is nan
         api.addBlock({
             opcode: 'skyhigh173.number.isnan',
             type: type.BlockType.BOOLEAN,
             messageId: 'skyhigh173.number.isnan',
-            categoryId: 'skyhigh173.number.numbertype.category',
+            categoryId: cateID,
             param: { N:{type: type.ParameterType.NUMBER, default: 0} },
             function: args => Number.isNaN(args.N)
         });
@@ -229,7 +239,7 @@ class MyExtension extends Extension {
             opcode: 'skyhigh173.number.isint',
             type: type.BlockType.BOOLEAN,
             messageId: 'skyhigh173.number.isint',
-            categoryId: 'skyhigh173.number.numbertype.category',
+            categoryId: cateID,
             param: { N:{type: type.ParameterType.NUMBER, default: 0} },
             function: args => Number.isInteger(Number(args.N))
         });
@@ -238,7 +248,7 @@ class MyExtension extends Extension {
             opcode: 'skyhigh173.number.issafeint',
             type: type.BlockType.BOOLEAN,
             messageId: 'skyhigh173.number.issafeint',
-            categoryId: 'skyhigh173.number.numbertype.category',
+            categoryId: cateID,
             param: { N:{type: type.ParameterType.NUMBER, default: 0} },
             function: args => Number.isSafeInteger(Number(args.N))
         });
@@ -247,7 +257,7 @@ class MyExtension extends Extension {
             opcode: 'skyhigh173.number.toexp',
             type: type.BlockType.REPORTER,
             messageId: 'skyhigh173.number.toexp',
-            categoryId: 'skyhigh173.number.numbertype.category',
+            categoryId: cateID,
             param: { N:{type: type.ParameterType.NUMBER, default: 12.34}, D:{type: type.ParameterType.NUMBER, default: 6} },
             function: args => { 
                 let argn = Number(args.N);
@@ -259,7 +269,7 @@ class MyExtension extends Extension {
             opcode: 'skyhigh173.number.tofixed',
             type: type.BlockType.REPORTER,
             messageId: 'skyhigh173.number.tofixed',
-            categoryId: 'skyhigh173.number.numbertype.category',
+            categoryId: cateID,
             param: { N:{type: type.ParameterType.NUMBER, default: 12.34}, D:{type: type.ParameterType.NUMBER, default: 6} },
             function: args => { 
                 let argn = Number(args.N);
@@ -279,6 +289,7 @@ class MyExtension extends Extension {
         api.removeCategory('skyhigh173.number.bigint.category');
         this.addNumberTypeBlocks();
         api.removeCategory('skyhigh173.number.numbertype.category');
+        
         // more extension
         api.addBlock({
             opcode: 'skyhigh173.number.addExtension',
@@ -319,6 +330,7 @@ class MyExtension extends Extension {
             }
             
         });
+        
         // math const
         api.addBlock({
             opcode: 'skyhigh173.number.getConst',
@@ -452,6 +464,24 @@ class MyExtension extends Extension {
                 if(args.MENU == 'min') return Math.min(args.A,args.B);
                 if(args.MENU == 'max') return Math.max(args.A,args.B);
             }
+        });
+        // gcd
+        api.addBlock({
+            opcode: 'skyhigh173.number.gcd',
+            type: type.BlockType.REPORTER,
+            messageId: 'skyhigh173.number.gcd',
+            categoryId: 'skyhigh173.number.category',
+            param: {
+                A: {
+                    type: type.ParameterType.NUMBER,
+                    default: 60
+                },
+                B: {
+                    type: type.ParameterType.NUMBER,
+                    default: 7
+                }
+            },
+            function: args => this.gcd(args.A,args.B,0)
         });
         // js Number.
         api.addBlock({
