@@ -1,6 +1,6 @@
 {
-    "skyhigh173.number.name": "數字擴展",
-    "skyhigh173.number.description": "一個關於數字的擴展",
+    "skyhigh173.number.name": "數字擴充套件",
+    "skyhigh173.number.description": "一個關於數字的擴充套件",
     "skyhigh173.number.category": "數字",
     "skyhigh173.number.bigint.category": "無限精度",
     "skyhigh173.number.numbertype.category": "數字類別",
@@ -10,26 +10,26 @@
     "skyhigh173.number.isfinite": "[N] 是否有限",
     "skyhigh173.number.isint": "[N] 是否為整數",
     "skyhigh173.number.issafeint": "[N] 是否為安全整數",
-    "skyhigh173.number.toexp": "[N] to exponential [D]",
-    "skyhigh173.number.tofixed": "[N] to fixed [D]",
+    "skyhigh173.number.toexp": "以科學記號表示［N] 至小數後 [D] 位",
+    "skyhigh173.number.tofixed": "四捨五入 [N] 至小數後 [D] 位",
 
-    "skyhigh173.number.bigIntPlus": "BigInt [A] + [B]",
-    "skyhigh173.number.bigIntMinus": "BigInt [A] - [B]",
-    "skyhigh173.number.bigIntMultiply": "BigInt [A] * [B]",
-    "skyhigh173.number.bigIntDivide": "BigInt [A] / [B]",
-    "skyhigh173.number.bigIntExpo": "BigInt [A] ^ [B]",
-    "skyhigh173.number.bigIntMod": "BigInt [A] 除以 [B] 的餘數",
+    "skyhigh173.number.bigIntPlus": "以雙精度浮點數計算 [A] + [B]",
+    "skyhigh173.number.bigIntMinus": "以雙精度浮點數計算 [A] - [B]",
+    "skyhigh173.number.bigIntMultiply": "以雙精度浮點數計算 [A] * [B]",
+    "skyhigh173.number.bigIntDivide": "以雙精度浮點數計算 [A] / [B]",
+    "skyhigh173.number.bigIntExpo": "以雙精度浮點數計算 [A] ^ [B]",
+    "skyhigh173.number.bigIntMod": "以雙精度浮點數計算 [A] 除以 [B] 的餘數",
 
 
     "skyhigh173.number.addExtension": "添加擴充功能 [MENU]",
-    "skyhigh173.number.addExtension.menu.BigInt": "BigInt",
-    "skyhigh173.number.addExtension.menu.NumberType": "Number Type",
+    "skyhigh173.number.addExtension.menu.BigInt": "雙精度浮點數",
+    "skyhigh173.number.addExtension.menu.NumberType": "數字類別",
     "skyhigh173.number.removeExtension": "移除擴充功能 [MENU]",
-    "skyhigh173.number.removeExtension.menu.BigInt": "BigInt",
-    "skyhigh173.number.removeExtension.menu.NumberType": "Number Type",
+    "skyhigh173.number.removeExtension.menu.BigInt": "雙精度浮點數",
+    "skyhigh173.number.removeExtension.menu.NumberType": "數字類別",
 
 
-    "skyhigh173.number.getConst": "獲取科學常數 [MENU]",
+    "skyhigh173.number.getConst": "科學常數 [MENU]",
     "skyhigh173.number.getConst.menu.pi": "π",
     "skyhigh173.number.getConst.menu.e": "e",
     "skyhigh173.number.getConst.menu.phi": "ϕ",
@@ -53,9 +53,9 @@
 
     "skyhigh173.number.log": "log[B]([N])",
 
-    "skyhigh173.number.minmax": "在 [A] 和 [B] 中選取 [MENU] 的數",
-    "skyhigh173.number.minmax.menu.min": "最小",
-    "skyhigh173.number.minmax.menu.max": "最大",
+    "skyhigh173.number.minmax": "在 [A] 和 [B] 中 [MENU] 的數",
+    "skyhigh173.number.minmax.menu.min": "較小",
+    "skyhigh173.number.minmax.menu.max": "較大",
 
     "skyhigh173.number.func": "[MENU] [N]",
     "skyhigh173.number.func.menu.sign": "sign",
