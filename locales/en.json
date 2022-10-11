@@ -62,6 +62,8 @@
     "skyhigh173.number.func.menu.cbrt": "cbrt",
     "skyhigh173.number.func.menu.trunc": "trunc",
 
+    "skyhigh173.number.gcd": "gcd [A][B]",
+    
     "skyhigh173.number.jsnumber": "Number [MENU]",
     "skyhigh173.number.jsnumber.menu.epsilon": "epsilon",
     "skyhigh173.number.jsnumber.menu.min_safe_int": "min safe int",

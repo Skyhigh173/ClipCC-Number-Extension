@@ -10,7 +10,7 @@
     "skyhigh173.number.isfinite": "[N] 是否有限",
     "skyhigh173.number.isint": "[N] 是否為整數",
     "skyhigh173.number.issafeint": "[N] 是否為安全整數",
-    "skyhigh173.number.toexp": "以科學記號表示［N] 至小數後 [D] 位",
+    "skyhigh173.number.toexp": "以科學記號表示 [N] 至小數後 [D] 位",
     "skyhigh173.number.tofixed": "四捨五入 [N] 至小數後 [D] 位",
 
     "skyhigh173.number.bigIntPlus": "以雙精度浮點數計算 [A] + [B]",
@@ -60,7 +60,17 @@
     "skyhigh173.number.func": "[MENU] [N]",
     "skyhigh173.number.func.menu.sign": "sign",
     "skyhigh173.number.func.menu.cbrt": "cbrt",
-    "skyhigh173.number.func.menu.trunc": "trunc"
+    "skyhigh173.number.func.menu.trunc": "trunc",
+
+    "skyhigh173.number.gcd": "gcd [A][B]",
+
+    "skyhigh173.number.jsnumber": "Number [MENU]",
+    "skyhigh173.number.jsnumber.menu.epsilon": "epsilon",
+    "skyhigh173.number.jsnumber.menu.min_safe_int": "min safe int",
+    "skyhigh173.number.jsnumber.menu.max_safe_int": "max safe int",
+    "skyhigh173.number.jsnumber.menu.min_value": "min value",
+    "skyhigh173.number.jsnumber.menu.max_value": "max value",
+    "skyhigh173.number.jsnumber.menu.nan": "NaN",
+    "skyhigh173.number.jsnumber.menu.neg_inf": "negative infinity",
+    "skyhigh173.number.jsnumber.menu.pos_inf": "positive infinity"
 }
-
-

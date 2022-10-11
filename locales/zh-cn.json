@@ -59,7 +59,19 @@
     "skyhigh173.number.func": "[MENU] [N]",
     "skyhigh173.number.func.menu.sign": "sign",
     "skyhigh173.number.func.menu.cbrt": "cbrt",
-    "skyhigh173.number.func.menu.trunc": "trunc"
+    "skyhigh173.number.func.menu.trunc": "trunc",
+
+    "skyhigh173.number.gcd": "gcd [A][B]",
+
+    "skyhigh173.number.jsnumber": "Number [MENU]",
+    "skyhigh173.number.jsnumber.menu.epsilon": "epsilon",
+    "skyhigh173.number.jsnumber.menu.min_safe_int": "min safe int",
+    "skyhigh173.number.jsnumber.menu.max_safe_int": "max safe int",
+    "skyhigh173.number.jsnumber.menu.min_value": "min value",
+    "skyhigh173.number.jsnumber.menu.max_value": "max value",
+    "skyhigh173.number.jsnumber.menu.nan": "NaN",
+    "skyhigh173.number.jsnumber.menu.neg_inf": "negative infinity",
+    "skyhigh173.number.jsnumber.menu.pos_inf": "positive infinity"
 }
 
 
